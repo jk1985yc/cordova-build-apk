@@ -1,0 +1,20 @@
+
+version: '2'
+services:
+
+  prod.cordova_apk:
+    build: /home/docker/OCM_Build_APP/
+    image: prod.cordova_apk-img:0.0.1
+    container_name: prod.cordova_apk
+    networks:
+        - lot_vlan
+    volumes:
+        - ./cordova:/home
+#    restart: always
+#    ports:
+#        - 80:80
+
+networks:
+  lot_vlan:
+
+
